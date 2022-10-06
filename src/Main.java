@@ -12,13 +12,14 @@ public class Main {
             System.out.println("5. Byte");
             System.out.println("6. Short");
             System.out.println("7. Long");
-            System.out.println("8. Exit");
+            System.out.println("8. Auto-detect");
+            System.out.println("9. Exit");
             System.out.print("Enter your choice: ");
             Scanner scan = new Scanner(System.in);
             try {
                 int choice = Integer.parseInt(scan.nextLine());
 
-                if (choice == 8) {
+                if (choice == 9) {
                     break;
                 }
 
@@ -94,6 +95,12 @@ public class Main {
                             nc = new NumberCalculator(Long.MAX_VALUE, choice);
                             nc.setNumberA(Long.parseLong(numberA));
                             nc.setNumberB(Long.parseLong(numberB));
+
+
+                        }
+                        else if (choice == 8) {
+                            //auto-detect
+                            AutoDetect au=new AutoDetect();
 
 
                         }else{
